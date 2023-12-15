@@ -1,5 +1,5 @@
 body {
-    background-color: #1a2649;
+    background-color: #384b83;
 }
 
 /*-----------------------------------------------------*/
@@ -12,8 +12,8 @@ body {
 }
 
 header {
-    height: 60px;
-    border-bottom: rgb(0, 123, 255) 1px solid; 
+    height: 75px;
+    border-bottom: rgb(54, 58, 62) 1px solid; 
 }
 
 header .hflex {
@@ -22,9 +22,10 @@ header .hflex {
 }
 
 h2 {
-    line-height: 60px;
+    line-height: 50px;
     color: #fff;
     letter-spacing: 0.2px;
+    padding-bottom: 5px;
 }
 
 .highlight-color {
@@ -39,20 +40,20 @@ nav ul {
 
 nav ul li {
     color: #fff;
-    transition: all 0.5s ease-in-out;
     cursor: pointer;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0 10px;
+
 }
 
 nav ul li:hover {
     padding: 0 10px;
     color: rgb(0, 0, 139); 
-    background-color: rgb(255, 140, 0); 
-    font-weight: 700;
-    text-decoration: underline;
+    background-color: rgb(255, 165, 0); 
 }
 
 nav ul li + li {
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 .banner .banner-layout {
@@ -65,7 +66,7 @@ nav ul li + li {
 .image-holder img {
     position: absolute;
     top: 15%;
-    left: 15%;
+    left: 10%;
     width: 250px;
     height: 250px;
     border-radius: 50%;
@@ -86,7 +87,7 @@ nav ul li + li {
     position: absolute;
     width: 300px;
     top: 30%;
-    right: 30%;
+    right: 10%;
     color: #fff;
 }
 
@@ -113,11 +114,12 @@ button {
     border: rgb(255, 165, 0) 1px solid; 
 }
 
-.rev {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 139), rgb(0, 123, 255)); 
-}
+.reviews-section {
 
-.customer-reviews {
+margin: 25px 0;}
+
+.customer-feedback {
+    margin-top: 25px;
     height: 300px;
 }
 
@@ -130,20 +132,19 @@ button {
 
 .reviews-layout {
     display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
     justify-content: space-around;
 }
 
 .review-card {
     height: 210px;
-    width: 200px;
+    width: calc(25% - 10px); /* Two cards side by side with margin in between */
     padding: 10px;
     background-color: rgb(0, 123, 255);
     border-radius: 10px;
-}
-
-.review-card {
-    margin: 0 5px;
+    margin: 0 5px 10px 5px; /* Margin on all sides with extra bottom margin */
     transition: all 0.5s ease-in-out;
+    box-sizing: border-box; /* Include padding and border in total width/height */
 }
 
 .review-card:hover {
@@ -159,7 +160,6 @@ button {
     color: #fff;
     font-weight: 300;
 }
-
 .customer-feedback .customer-says {
     height: 250px;
 }
@@ -169,76 +169,78 @@ button {
     text-align: center;
     margin: 20px;
     font-size: 26px;
+align-items: start;
 }
 
 .feedback-layout {
     display: flex;
     position: relative;
     margin-top: 30px;
+    margin-left: 25px;
 }
 
 .customer-photo img {
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    position: absolute;
-    left: 230px;
+    margin-left: 50px;
+   
 }
 
 .feedback-layout .feedback-text {
-    width: 500px;
+    width: 300px;
     position: absolute;
-    right: 170px;
+    right: 420px;
     color: #fff;
     top: 10px;
+    text-align: left;
+    margin-left: 20px;
+
 }
 
 .feedback-text h4 {
     color: rgb(255, 200, 124); 
+text-align: left;
+margin-left: 20px;
 }
 
-.location-section {
-    background-image: linear-gradient(to bottom, rgb(0, 123, 255), rgb(0, 0, 139));
-}
+
 
 .location-map {
     height: 500px;
-    display: grid;
-    place-items: center;
 }
 
-.location-map h3 {
+.location-section h3 {
     color: #fff;
     font-size: 26px;
-    margin-top: 20px;
+    margin-top: 70px;
 }
 
-.map-container {
-    height: 400px;
-    width: 90%;
-    background-color: rgb(0, 0, 139); 
-    position: relative;
-    margin-inline: auto;
+
+#map {
+    position: relative; /* Set position to relative */
+    height: 400px; /* Adjust the height as needed */
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 5px;
 }
 
-.location-icon {
-    position: absolute;
+.icon {
+    position: absolute; /* Position the icon absolutely within the map container */
     bottom: 20px;
     right: 20px;
     height: 40px;
     width: 40px;
-    background-color: #f1f1f1;
+    background-color: #0a2564;
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
-    font-size: 22px;
+    font-size: 22px; /* Adjusted font size */
     color: rgb(0, 153, 255);
     cursor: pointer;
+    z-index: 1000; /* Ensure it's above other elements */
 }
-#map-container {
-    height: 400px; /* Example height */
-    width: 100%; /* Example width */
-}
+
 footer {
     height: 60px;
     text-align: center;
@@ -272,4 +274,63 @@ footer p {
     float: right;
     cursor: pointer;
 }
-        
+        /* Media query for medium screens */
+@media screen and (max-width: 768px) {
+    .banner .banner-layout {
+        flex-direction: column-reverse; 
+        height: auto; 
+    }
+
+    .image-holder img {
+        position: static; 
+        width: 100%;
+        height: auto;
+         border-radius: 50%; 
+        align-items:center;    }
+
+    .banner-layout .banner-content {
+        position: static; 
+        width: 100%;
+        top: auto;
+        right: auto; 
+        text-align: center; 
+    }
+    .reviews-layout {
+        flex-direction:row; /* Change to a column layout for small screens */
+    }
+
+    .review-card {
+        width: calc(45% - 10px); /* Make the card full width with margin */
+
+    }
+}@media screen and (max-width: 500px) {
+    .review-card {
+        max-width: calc(100% - 20px); /* Maximum width for one card with margin */
+        width: 100%;
+
+    }
+    .reviews-layout {
+        flex-direction:column; /* Change to a column layout for small screens */
+    }
+    .location-section h3 {
+      text-align: center;
+    }
+}
+@media screen and (max-width: 1090px) {
+    .feedback-layout .feedback-text {
+        width: 200px;
+        position: absolute;
+        right: 320px;
+        color: #fff;
+        top: 10px;
+    }
+}
+@media screen and (max-width: 980px) {
+    .feedback-layout .feedback-text {
+        position: static; 
+        width: 100%;
+        top: auto;
+        right: auto; 
+        text-align: center; 
+    }
+}

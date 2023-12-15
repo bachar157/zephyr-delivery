@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="shortcut icon" href="./assets/image/diamond.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style/index.css" media="all">
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css">
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
@@ -21,7 +20,7 @@
   <body>
     <!-- Header -->
     <header>
-      <div class="container hflex">
+      <div class="container hflex main-container">
         <h2> Zephyr Delivery </h2>
         <nav>
           <ul>
@@ -115,12 +114,12 @@
       <!-- Map -->
       <section class="location-section">
         <div class="main-container location-map">
-          <h3>TRACK TO YOUR LOCATION</h3>
-          <div id="map-container">
-            <div class="location-icon"><i class="fa-solid fa-location-dot"></i></div>
-          </div>
+            <h3>TRACK TO YOUR LOCATION</h3>
+            <div id="map" class="map-container"> <!-- Updated the id to 'map' -->
+                <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+            </div>
         </div>
-      </section>
+    </section>
   
       <footer>
         <p>&copy;<span class="highlight-color">Zephyr Delivery</span> 2023</p> 
