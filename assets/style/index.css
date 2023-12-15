@@ -235,7 +235,10 @@ button {
     color: rgb(0, 153, 255);
     cursor: pointer;
 }
-
+#map-container {
+    height: 400px; /* Example height */
+    width: 100%; /* Example width */
+}
 footer {
     height: 60px;
     text-align: center;
