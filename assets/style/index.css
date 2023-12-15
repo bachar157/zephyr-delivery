@@ -1,0 +1,272 @@
+body {
+    background-color: #1a2649;
+}
+
+/*-----------------------------------------------------*/
+/* Main Container                                      */
+/*-----------------------------------------------------*/
+
+.main-container {
+    width: min(100% - 30px, 1080px);
+    margin: auto;
+}
+
+header {
+    height: 60px;
+    border-bottom: rgb(0, 123, 255) 1px solid; 
+}
+
+header .hflex {
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    line-height: 60px;
+    color: #fff;
+    letter-spacing: 0.2px;
+}
+
+.highlight-color {
+    color: rgb(255, 165, 0); 
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    line-height: 60px;
+}
+
+nav ul li {
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    padding: 0 10px;
+    color: rgb(0, 0, 139); 
+    background-color: rgb(255, 140, 0); 
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+nav ul li + li {
+    margin-left: 20px;
+}
+
+.banner .banner-layout {
+    display: flex;
+    justify-content: space-around;
+    height: 400px;
+    position: relative;
+}
+
+.image-holder img {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    line-height: 500px;
+}
+
+.image-holder img {
+    animation: animate 2s ease-in-out;
+}
+
+@keyframes animate {
+    0% {  opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.banner-layout .banner-content {
+    position: absolute;
+    width: 300px;
+    top: 30%;
+    right: 30%;
+    color: #fff;
+}
+
+button {
+    height: 35px;
+    width: 120px;
+    background-color: rgb(255, 165, 0); /* Replaced --app-orange1 */
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-order {
+    color: rgb(0, 0, 139); 
+    background-image: linear-gradient(to bottom right, rgb(255, 165, 0), rgb(255, 200, 124));
+    border: rgb(0, 0, 139) 1px solid; 
+}
+
+.btn-offer {
+    color: #fff;
+    background-color: rgb(0, 0, 139); 
+    border: rgb(255, 165, 0) 1px solid; 
+}
+
+.rev {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 139), rgb(0, 123, 255)); 
+}
+
+.customer-reviews {
+    height: 300px;
+}
+
+.customer-reviews h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.reviews-layout {
+    display: flex;
+    justify-content: space-around;
+}
+
+.review-card {
+    height: 210px;
+    width: 200px;
+    padding: 10px;
+    background-color: rgb(0, 123, 255);
+    border-radius: 10px;
+}
+
+.review-card {
+    margin: 0 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.review-card:hover {
+    background-color: rgb(70, 130, 180); 
+}
+
+.review-card h4 {
+    color: rgb(255, 200, 124);
+    margin-bottom: 5px;
+}
+
+.review-card p {
+    color: #fff;
+    font-weight: 300;
+}
+
+.customer-feedback .customer-says {
+    height: 250px;
+}
+
+.customer-feedback h3 {
+    color: #fff;
+    text-align: center;
+    margin: 20px;
+    font-size: 26px;
+}
+
+.feedback-layout {
+    display: flex;
+    position: relative;
+    margin-top: 30px;
+}
+
+.customer-photo img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    left: 230px;
+}
+
+.feedback-layout .feedback-text {
+    width: 500px;
+    position: absolute;
+    right: 170px;
+    color: #fff;
+    top: 10px;
+}
+
+.feedback-text h4 {
+    color: rgb(255, 200, 124); 
+}
+
+.location-section {
+    background-image: linear-gradient(to bottom, rgb(0, 123, 255), rgb(0, 0, 139));
+}
+
+.location-map {
+    height: 500px;
+    display: grid;
+    place-items: center;
+}
+
+.location-map h3 {
+    color: #fff;
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+.map-container {
+    height: 400px;
+    width: 90%;
+    background-color: rgb(0, 0, 139); 
+    position: relative;
+    margin-inline: auto;
+}
+
+.location-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 22px;
+    color: rgb(0, 153, 255);
+    cursor: pointer;
+}
+
+footer {
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-top: rgb(0, 123, 255) 1px solid; 
+}
+
+footer p {
+    color: #fff;
+}
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close-button {
+    float: right;
+    cursor: pointer;
+}
+        
